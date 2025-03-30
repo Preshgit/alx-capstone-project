@@ -74,7 +74,8 @@ yarn dev
 │   ├── demoArtworks.ts     # Sample artwork data
 ├── public/                 # Static assets
 │   ├── images/             # Artwork images
-├── types.ts                # TypeScript type definitions
+├── utils/                  # Static assets
+│   ├── types.ts/           # TypeScript type definitions
 ```
 
 ## Future Enhancements

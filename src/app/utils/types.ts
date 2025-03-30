@@ -5,7 +5,7 @@ export interface ArtworkType {
   artist: string;
   artistSlug: string;
   description: string;
-  imageUrl?: string;
+  imageUrl: string;
   category: string;
   year?: number;
   location?: string;

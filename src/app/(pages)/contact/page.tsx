@@ -165,7 +165,7 @@ export default function Contact() {
 
                 {submitSuccess && (
                   <div className="p-4 bg-green-100 text-green-800 rounded-lg">
-                    Thank you for your suggestion! We'll review it soon.
+                    Thank you for your suggestion! We&apos;ll review it soon.
                   </div>
                 )}
 
@@ -186,8 +186,8 @@ export default function Contact() {
                 Contact Us
               </h2>
               <p className="text-gray-600 mb-8">
-                Have questions, feedback, or just want to say hello? We'd love
-                to hear from you!
+                Have questions, feedback, or just want to say hello? We&apos;d
+                love to hear from you!
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">

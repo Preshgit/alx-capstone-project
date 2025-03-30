@@ -272,7 +272,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Let's Talk
+            Let&apos;s Talk
           </motion.h2>
           <motion.p
             className="text-xl mb-10 opacity-90"

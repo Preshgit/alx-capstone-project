@@ -92,7 +92,7 @@ export const demoArtworks: ArtworkType[] = [
     imageUrl: "/images/coexistence.jpg", // Replace with your placeholder image
     category: "Painting",
     year: 2023,
-    location: "Abidjan, Côte d'Ivoire",
+    location: "Abidjan, Côte d&apos;Ivoire",
     social: {
       instagram: "https://www.instagram.com/dotundavid_popoola/",
       website: "https://shorturl.at/kVjbW",

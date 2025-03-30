@@ -2,10 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/artists", label: "Artists" },
+    { href: "/categories", label: "Categories" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -23,30 +32,20 @@ export default function Navbar() {
               </motion.span>
             </Link>
             <nav className="hidden md:ml-6 md:flex md:space-x-8">
-              <Link
-                href="/"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium text-gray-900"
-              >
-                Home
-              </Link>
-              <Link
-                href="/artists"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Artists
-              </Link>
-              <Link
-                href="/categories"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Categories
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium 
+                    ${
+                      pathname === link.href
+                        ? "border-indigo-500 text-gray-900"
+                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -59,12 +58,10 @@ export default function Navbar() {
                 Suggest Artist
               </Link>
             </div>
-
             <div className="md:hidden flex items-center">
               <button
                 type="button"
                 className="bg-white p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                aria-expanded="false"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -88,7 +85,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu, show/hide based on menu state */}
+      {/* Mobile menu */}
       {isMenuOpen && (
         <motion.div
           className="md:hidden bg-white shadow-lg"
@@ -98,30 +95,20 @@ export default function Navbar() {
           transition={{ duration: 0.3 }}
         >
           <div className="pt-2 pb-3 space-y-1">
-            <Link
-              href="/"
-              className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50"
-            >
-              Home
-            </Link>
-            <Link
-              href="/artists"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
-            >
-              Artists
-            </Link>
-            <Link
-              href="/categories"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
-            >
-              Categories
-            </Link>
-            <Link
-              href="/contact"
-              className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
-            >
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium 
+                  ${
+                    pathname === link.href
+                      ? "border-indigo-500 text-indigo-700 bg-indigo-50"
+                      : "border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800"
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <div className="pl-3 pr-4 py-3">
               <Link
                 href="/contact"

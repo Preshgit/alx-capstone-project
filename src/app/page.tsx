@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import ArtCard from "./components/ArtCard";
 import { motion } from "framer-motion";

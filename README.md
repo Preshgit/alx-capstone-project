@@ -17,12 +17,16 @@ This platform celebrates various categories of African art including sculptures,
 - **Search Functionality:** Find artists by name with intuitive error handling
 - **Contact Form:** Suggest new artists to be featured on the platform
 
+## Visit the website and explore the exciting African Art Virtual Museum.
+
+https://alx-capstone-project-woad.vercel.app/
+
 ## Tech Stack
 
 - **Frontend:** Next.js 14, React, TypeScript
 - **Styling:** Tailwind CSS
 - **Animations:** Framer Motion
-- **Deployment:** [Your deployment platform]
+- **Deployment:** vercel
 
 ## Getting Started
 

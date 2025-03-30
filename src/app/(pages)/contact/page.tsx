@@ -242,7 +242,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={6}
+                    rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                     placeholder="What would you like to tell us?"
                   />
@@ -291,7 +291,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/precious-omotosho/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-yellow-400 text-indigo-900 px-10 py-5 rounded-full text-xl font-bold hover:bg-yellow-300 transition transform hover:scale-105"

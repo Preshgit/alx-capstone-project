@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row gap-6 md:justify-between">
           <div>
             <h3 className="text-xl font-bold mb-4">African Art Celebration</h3>
             <p className="text-gray-300 mb-4">
@@ -44,7 +44,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex flex-col md:flex-row gap-2 md:gap-8 lg:gap-12">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white">
                   Home
@@ -59,11 +59,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/categories"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Categories
+                <Link href="/about" className="text-gray-300 hover:text-white">
+                  About
                 </Link>
               </li>
               <li>
@@ -77,7 +74,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-4">Categories</h3>
             <ul className="space-y-2">
               <li>
@@ -113,7 +110,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">

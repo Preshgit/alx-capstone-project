@@ -21,7 +21,7 @@ export default function ArtistDetail() {
       if (foundArtist) {
         setArtist(foundArtist);
       } else {
-        // Handle case where artist doesn't exist
+        // Handle case where artist doesnt exist
         router.push("/artists");
       }
     }

@@ -83,7 +83,7 @@ export default function Contact() {
 
       <section className="py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 px-4 md:px-24">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -177,7 +177,7 @@ export default function Contact() {
               </form>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -258,7 +258,7 @@ export default function Contact() {
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>

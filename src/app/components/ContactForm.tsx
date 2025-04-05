@@ -38,7 +38,7 @@ interface ContactFormProps {
 
 const ContactForm = ({
   title = "Contact Us",
-  subtitle = "Have questions, feedback, or just want to say hello? We'd love to hear from you!",
+  subtitle = "Have questions, feedback, or just want to say hello? We would love to hear from you!",
   buttonText = "Send Message",
   loadingText = "Sending...",
   onSubmit,
@@ -72,7 +72,7 @@ const ContactForm = ({
       } else {
         // Default submission behavior if no onSubmit provided
         console.log("Form submitted:", formData);
-        alert("Thank you for your message! We'll get back to you soon.");
+        alert("Thank you for your message! We will get back to you soon.");
       }
       // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });

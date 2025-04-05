@@ -50,9 +50,8 @@ export default function About() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // Show success message
-    alert("Thank you for contacting us! We'll get back to you soon.");
+    alert("Thank you for contacting us! We will get back to you soon.");
   };
-
 
   return (
     <>
@@ -124,7 +123,7 @@ export default function About() {
                 long.
               </p>
               <p className="text-lg text-gray-700 font-semibold">
-                Our vision extends beyond mere showcasing—we're building a
+                Our vision extends beyond mere showcasing—we&apos;re building a
                 community that celebrates, preserves, and evolves African
                 artistic traditions for future generations.
               </p>
@@ -163,9 +162,9 @@ export default function About() {
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 This platform represents the culmination of my journey as a
-                Capstone Project for the ALX Coding Bootcamp. I couldn't have
-                chosen a more fulfilling project—one that marries my technical
-                skills with my passion for African art and culture.
+                Capstone Project for the ALX Coding Bootcamp. I couldn&apos;t
+                have chosen a more fulfilling project—one that marries my
+                technical skills with my passion for African art and culture.
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 Too often, our African artistic heroes remain unsung, their work
@@ -213,7 +212,7 @@ export default function About() {
             <motion.div variants={fadeIn}>
               <ContactForm
                 title="Get In Touch"
-                subtitle="Have questions about our company or services? We'd love to hear from you!"
+                subtitle="Have questions about our company or services? We would love to hear from you!"
                 buttonText="Send Your Message"
                 loadingText="Sending..."
                 onSubmit={handleFormSubmit}
@@ -221,7 +220,7 @@ export default function About() {
                   name: "",
                   email: "",
                   message:
-                    "I'm interested in learning more about your services.",
+                    "I&apos;m interested in learning more about your services.",
                 }}
                 motionProps={{
                   initial: { opacity: 0, x: -30 },
@@ -229,18 +228,7 @@ export default function About() {
                   transition: { duration: 0.6, delay: 0.3 },
                 }}
               />
-              {/* <ContactForm
-                title="Send Us a Message"
-                subtitle="Have a question or suggestion? We'd love to hear from you!"
-                buttonText="Send Message"
-                loadingText="Sending..."
-                onSubmit={handleFormSubmit}
-                motionProps={{
-                  initial: { opacity: 0 },
-                  animate: { opacity: 1 },
-                  transition: { duration: 0.5 },
-                }}
-              /> */}
+             
             </motion.div>
 
             <motion.div variants={fadeIn} className="bg-gray-50 p-8 rounded-xl">
@@ -248,10 +236,10 @@ export default function About() {
                 Connect With Us
               </h3>
               <p className="text-lg text-gray-700 mb-6">
-                We're always looking to collaborate with artists, collectors,
-                and enthusiasts who share our passion for African art. Whether
-                you have questions, suggestions, or just want to say hello, we'd
-                love to hear from you.
+                We&apos;re always looking to collaborate with artists,
+                collectors, and enthusiasts who share our passion for African
+                art. Whether you have questions, suggestions, or just want to
+                say hello, we&apos;d love to hear from you.
               </p>
 
               <motion.div
@@ -276,7 +264,7 @@ export default function About() {
                     >
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
-                    <span>Let's Talk</span>
+                    <span>Let&apos;s Talk</span>
                   </div>
                 </Link>
               </motion.div>
@@ -325,7 +313,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-2">E-Commerce Integration</h3>
               <p>
-                Soon, you'll be able to purchase artworks directly from the
+                Soon, you&apos;ll be able to purchase artworks directly from the
                 artists, supporting their work and bringing a piece of African
                 creativity into your space.
               </p>
@@ -354,9 +342,9 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-2">Artist Communities</h3>
               <p>
-                We're developing spaces for artists to connect, collaborate, and
-                share resources, fostering a vibrant community of African
-                creators.
+                We&apos;re developing spaces for artists to connect,
+                collaborate, and share resources, fostering a vibrant community
+                of African creators.
               </p>
             </motion.div>
 

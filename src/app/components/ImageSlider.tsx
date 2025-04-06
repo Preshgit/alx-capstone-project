@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Define the type for each image object
 interface ImageType {
@@ -65,7 +66,7 @@ const ImageSlider = ({
           transition={{ duration: 1 }}
         >
           <div className="relative w-full overflow-hidden">
-            <img
+            <Image
               src={image.src}
               alt={image.alt}
               className="w-full h-full object-cover object-top"

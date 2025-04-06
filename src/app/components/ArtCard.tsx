@@ -1,6 +1,4 @@
-// components/ArtCard.tsx
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -57,7 +55,7 @@ export default function ArtCard({ artwork }: ArtCardProps) {
               {artwork.category}
             </span>
             <Link
-              href={`/artists/${artwork.artistSlug}`}
+              href={`/artists/${artwork.id}`}
               className="text-indigo-600 text-sm font-medium hover:text-indigo-800"
             >
               Artist Profile →

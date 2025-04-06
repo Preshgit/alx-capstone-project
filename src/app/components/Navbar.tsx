@@ -52,7 +52,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="hidden md:ml-4 md:flex md:items-center">
               <Link
-                href="/contact"
+                href="/suggestArtist"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Suggest Artist
@@ -111,7 +111,7 @@ export default function Navbar() {
             ))}
             <div className="pl-3 pr-4 py-3">
               <Link
-                href="/contact"
+                href="/suggestArtist"
                 className="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Suggest Artist

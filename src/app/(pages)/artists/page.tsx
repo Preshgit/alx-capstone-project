@@ -193,7 +193,7 @@ export default function Artists() {
                 Would you like to suggest an artist for our collection?
               </p>
               <Link
-                href="/contact"
+                href="/suggestArtist"
                 className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-700 transition"
               >
                 Suggest an Artist

@@ -4,22 +4,23 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import ImageSlider from "@/app/components/ImageSlider";
 import ContactForm from "@/app/components/ContactForm";
+import { FaInstagram, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 
 // Main About Page Component
 export default function About() {
   // Sample images for purpose section
   const purposeImages = [
-    { src: "/images/african-art-1.jpg", alt: "Traditional African sculpture" },
-    { src: "/images/african-art-2.jpg", alt: "Contemporary African painting" },
-    { src: "/images/african-art-3.jpg", alt: "African architecture" },
-    { src: "/images/african-art-4.jpg", alt: "African furniture design" },
+    { src: "/images/cowHead.jpg", alt: "Traditional African sculpture" },
+    { src: "/images/chicken1.jpg", alt: "Contemporary African painting" },
+    { src: "/images/ileIla.jpg", alt: "African architecture" },
+    { src: "/images/ileIlachair1.jpg", alt: "African furniture design" },
   ];
 
   // Sample images for creator section
   const creatorImages = [
-    { src: "/images/creator-1.jpg", alt: "Creator portrait" },
-    { src: "/images/creator-2.jpg", alt: "Creator working on design" },
-    { src: "/images/creator-3.jpg", alt: "Creator at exhibition" },
+    { src: "/images/creator-1.jpeg", alt: "Creator portrait" },
+    { src: "/images/creator-2.jpeg", alt: "Creator working on design" },
+    { src: "/images/creator-3.jpeg", alt: "Creator at exhibition" },
   ];
 
   // Animation variants
@@ -134,7 +135,7 @@ export default function About() {
 
       {/* About the Creator Section */}
       <motion.section
-        className="py-16 px-4 md:px-8 bg-indigo-50"
+        className="py-16 px-4 md:px-8 bg-gray-50"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -149,7 +150,7 @@ export default function About() {
           </motion.h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <motion.div variants={fadeIn} className="order-2 lg:order-1">
+            <motion.div variants={fadeIn} className="space-y-4">
               <h3 className="text-2xl font-bold mb-4 text-indigo-800">
                 My Journey
               </h3>
@@ -179,13 +180,39 @@ export default function About() {
                 artists—transforming appreciation into sustainable support for
                 these talented creators.
               </p>
+              {/* connect with me */}
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold mb-4 text-indigo-800">
+                  Connect with Me
+                </h3>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/precious-omotosho/"
+                    className="text-gray-900 hover:text-blue-950"
+                  >
+                    <FaLinkedin className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/preciousomotoshot/"
+                    className="text-gray-900 hover:text-blue-950"
+                  >
+                    <FaInstagram className="h-6 w-6" />
+                  </a>
+
+                  <a
+                    href="https://x.com/presh_OT"
+                    className="text-gray-900 hover:text-red-950"
+                  >
+                    <FaSquareXTwitter className="h-6 w-6" />
+                  </a>
+                </div>
+              </div>
             </motion.div>
 
-            <motion.div variants={fadeIn} className="order-1 lg:order-2">
+            <motion.div variants={fadeIn}>
               <ImageSlider
                 images={creatorImages}
-                interval={5000}
-                className="h-80 lg:h-full w-full"
+                className="h-80 lg:h-svh w-full"
               />
             </motion.div>
           </div>
@@ -193,7 +220,7 @@ export default function About() {
       </motion.section>
 
       {/* Contact Form Section */}
-      <motion.section
+      {/* <motion.section
         className="py-16 px-4 md:px-8 bg-white"
         initial="hidden"
         whileInView="visible"
@@ -208,7 +235,7 @@ export default function About() {
             Get In Touch
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols gap-8 px-2 md:px-36 items-center justify-center">
             <motion.div variants={fadeIn}>
               <ContactForm
                 title="Get In Touch"
@@ -220,7 +247,7 @@ export default function About() {
                   name: "",
                   email: "",
                   message:
-                    "I&apos;m interested in learning more about your services.",
+                    "I am interested in learning more about your services.",
                 }}
                 motionProps={{
                   initial: { opacity: 0, x: -30 },
@@ -228,12 +255,11 @@ export default function About() {
                   transition: { duration: 0.6, delay: 0.3 },
                 }}
               />
-             
             </motion.div>
 
             <motion.div variants={fadeIn} className="bg-gray-50 p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4 text-indigo-800">
-                Connect With Us
+                Connect With Me
               </h3>
               <p className="text-lg text-gray-700 mb-6">
                 We&apos;re always looking to collaborate with artists,
@@ -271,10 +297,10 @@ export default function About() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Future Plans Section */}
-      <motion.section
+      {/* <motion.section
         className="py-16 px-4 md:px-8 bg-gradient-to-r from-purple-900 to-indigo-900 text-white"
         initial="hidden"
         whileInView="visible"
@@ -378,7 +404,7 @@ export default function About() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
     </>
   );
 }

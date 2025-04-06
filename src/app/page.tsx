@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ArtCard from "./components/ArtCard";
 import { motion } from "framer-motion";
 import { demoArtworks } from "./data/demoArtworks";
+// import { customAxios } from "./axios.config";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [featured, setFeatured] = useState([]); // you need to create the interface for the response
 
   const container = {
     hidden: { opacity: 0 },
@@ -16,6 +18,32 @@ export default function Home() {
       },
     },
   };
+
+  // useEffect(() => {
+  //   const getFeaturedArts = async () => {
+  //     try {
+  //       const { data } = await customAxios.get("/api/");
+  //       setFeatured(data);
+  //     } catch (err) {
+  //       if (err instanceof Error) console.error(err.message);
+  //     }
+  //   };
+  //   getFeaturedArts();
+  // }, []);
+
+  // {
+  //     id: "art1",
+  //     title: "Cow Head Monume",
+  //     artist: "Dotun Popoola",
+  //     description:
+  //       "A magnificent wooden sculpture representing the connection between generations, carved from a single piece of African mahogany. The intricate details tell stories of wisdom passed through time.",
+  //     imageUrl: "/images/cowHead.jpg",
+  //     category: "Sculpture",
+  //     location: "Nigeria",
+  //     social: {
+  //       instagram: "https://www.instagram.com/dotundavid_popoola/",
+  //       website: "https://shorturl.at/kVjbW",
+  //     },
 
   const filteredArtworks = demoArtworks.filter((artwork) =>
     artwork.artist.toLowerCase().includes(searchQuery.toLowerCase())
@@ -99,7 +127,7 @@ export default function Home() {
                 Would you like to suggest an artist for our collection?
               </p>
               <a
-                href="/contact"
+                href="/suggestArtist"
                 className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-700 transition"
               >
                 Suggest an Artist

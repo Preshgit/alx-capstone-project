@@ -281,7 +281,7 @@ export default function ContactForm({
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">
                   Thank you for your {isArtistForm ? "suggestion" : "message"}!
-                  We'll review it soon.
+                  We will review it soon. Thank you!
                 </p>
               </div>
             </div>

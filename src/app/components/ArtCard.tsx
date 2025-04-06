@@ -27,7 +27,7 @@ export default function ArtCard({ artwork }: ArtCardProps) {
       >
         <div className="relative h-64 sm:h-72 overflow-hidden">
           <Image
-            src={artwork.imageUrl}
+            src={artwork.imageUrl ?? ""}
             alt={artwork.title}
             className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             width={500}

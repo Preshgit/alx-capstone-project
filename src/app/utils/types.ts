@@ -1,6 +1,6 @@
 // types.ts
 export interface ArtworkType {
-  id: string;
+  id: number;
   title: string;
   artist: string;
   artistSlug: string;
@@ -15,18 +15,6 @@ export interface ArtworkType {
     instagram?: string;
     twitter?: string;
   };
-}
-
-export interface VideoArtworkType {
-  id: string;
-  title: string;
-  artist: string;
-  artistSlug: string;
-  description: string;
-  videoUrl?: string;
-  category: string;
-  year?: number;
-  location?: string;
 }
 
 export interface ArtistType {

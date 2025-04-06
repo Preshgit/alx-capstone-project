@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* Video Artworks Section */}
       {videoArtworks.length > 0 && (
-        <section className="py-16 px-4 md:px-8 bg-gray-50">
+        <section className="pt-16 pb-8 px-4 md:px-8 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <motion.h2
               className="text-3xl font-bold mb-12 text-center text-gray-800"
@@ -85,7 +85,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Featured Video Art
+              Featured Artworks
             </motion.h2>
 
             <motion.div
@@ -103,16 +103,16 @@ export default function Home() {
       )}
 
       {/* Regular Artworks Section */}
-      <section className="py-16 px-4 md:px-8 bg-gray-50">
+      <section className="pb-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <motion.h2
+          {/* <motion.h2
             className="text-3xl font-bold mb-12 text-center text-gray-800"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             Featured Artworks
-          </motion.h2>
+          </motion.h2> */}
 
           {regularArtworks.length > 0 ? (
             <motion.div

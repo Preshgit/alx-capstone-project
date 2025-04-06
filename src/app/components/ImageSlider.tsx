@@ -65,11 +65,12 @@ const ImageSlider = ({
           animate={{ opacity: index === currentIndex ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="relative w-full overflow-hidden">
+          <div className="relative w-full overflow-hidden aspect-square">
             <Image
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover object-top"
+              fill={true}
+              className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>

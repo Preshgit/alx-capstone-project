@@ -168,7 +168,7 @@ export default function ArtModal({ isOpen, onClose, artwork }: ArtModalProps) {
                   </div>
 
                   <Link
-                    href={`/artists/${artwork.artistSlug}`}
+                    href={`/artists/${artwork.id}`}
                     className="block w-full text-center bg-indigo-600 text-white font-medium py-2 px-4 rounded-full hover:bg-indigo-700 transition"
                   >
                     Visit Artist Profile

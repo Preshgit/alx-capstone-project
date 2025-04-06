@@ -22,46 +22,45 @@ export interface Artist {
 export const artists: Artist[] = [
   {
     id: 1,
-    name: "Aisha Tanaka",
-    profileImage: "/images/artist1.jpg",
+    name: "Dotun Popoola",
+    profileImage: "/images/dotunPopoola.jpg",
     description:
-      "Contemporary artist mixing traditional African symbolism with modern abstract techniques. Based in Lagos, Nigeria with over 15 years of experience in various mediums.",
-    website: "https://aishatanaka.com",
-    instagram: "aisha_tanaka_art",
-    twitter: "AishaTanakaArt",
+      "Dotun Popoola is a synergetic metal sculptor renowned for his monumental works that transform trash into treasures, rubbish into rubies, and waste into wealth. Rising from a place of hopelessness, he has become a beacon of hope, using his artistic and leadership skills to serve humanity through community engagement and creative expression. He facilitates workshops for students, professionals, NGOs, healthcare institutions, and schools both locally and internationally. With several large-scale sculptures and murals in Nigeria and the U.S., Dotun continues to mentor artists and foster professional development at his studio in Southwest Nigeria.",
+    website: "https://dotunpopo.com/",
+    instagram: "dotundavid_popoola/",
+    twitter: "dotunpopoo",
     artworks: [
       {
         id: 101,
-        image: "/images/artwork1.jpg",
-        title: "Spirit Dance",
-        likes: 124,
-        comments: 18,
+        image: "/images/dotun/chickenAndArtist.jpg",
+        title: "The Chicken Sculpture",
+        likes: 12,
+        comments: 1,
       },
       {
         id: 102,
-        image: "/images/artwork2.jpg",
-        title: "Urban Masks",
-        likes: 89,
-        comments: 7,
+        image: "/images/dotun/fela.jpg",
+        title: "Fela Kuti",
+        likes: 1,
+        comments: 0,
       },
       {
         id: 103,
-        image: "/images/artwork3.jpg",
-        title: "Ancestral Whispers",
-        likes: 145,
-        comments: 23,
+        image: "/images/dotun/theArtistDog.jpeg",
+        title: "The Artist Dog",
+        likes: 1,
+        comments: 3,
       },
     ],
   },
   {
     id: 2,
-    name: "Kwame Osei",
-    profileImage: "/images/artist2.jpg",
+    name: "Jonathan Imafidon",
+    profileImage: "/images/jonathanImafidor.jpg",
     description:
       "Sculptor and installation artist exploring themes of cultural heritage and diaspora. His work has been featured in exhibitions across Africa, Europe, and North America.",
-    website: "https://kwameosei.art",
-    instagram: "kwame_creates",
-    twitter: "KwameOseiArt",
+    instagram: "jonathanimafidor/",
+    twitter: "joeimafidor",
     artworks: [
       {
         id: 201,
@@ -81,12 +80,12 @@ export const artists: Artist[] = [
   },
   {
     id: 3,
-    name: "Zainab El-Mahdi",
-    profileImage: "/images/artist3.jpg",
+    name: "Ajayi Toyeeb",
+    profileImage: "/images/AjayiToyeeb.jpeg",
     description:
-      "Textile artist and designer who combines traditional West African weaving techniques with contemporary patterns and applications.",
-    website: "https://zainabdesigns.com",
-    instagram: "zainab_textiles",
+      "Ajayi Toyeeb is a visionary Upcycling Artist and Tyre Sculptor based in Nigeria, celebrated for his ability to creatively transform discarded materials into captivating works of art. His innovative approach to upcycling challenges conventional thinking and promotes environmental sustainability. Among his many remarkable creations is the monumental masterpiece “King Kong”, a towering sculpture that currently stands proudly in Lagos at @ecobank_nigeria.",
+    instagram: "toyeebajayi/",
+    twitter: "ajayitoyeeb",
     artworks: [
       {
         id: 301,

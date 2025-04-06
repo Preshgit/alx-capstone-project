@@ -29,7 +29,7 @@ export default function ArtCard({ artwork }: ArtCardProps) {
           <Image
             src={artwork.imageUrl}
             alt={artwork.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             width={500}
             height={400}
           />

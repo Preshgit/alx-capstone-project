@@ -78,61 +78,6 @@ export default function About() {
           </motion.p>
         </div>
       </section>
-
-      {/* Purpose Section - Tile Grid */}
-      <motion.section
-        className="py-16 px-4 md:px-8 bg-gray-50"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            className="text-3xl font-bold mb-8 text-center text-gray-800"
-            variants={fadeIn}
-          >
-            Our Purpose
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <motion.div variants={fadeIn}>
-              <ImageSlider
-                images={purposeImages}
-                className="h-80 lg:h-96 w-full"
-              />
-            </motion.div>
-
-            <motion.div variants={fadeIn} className="space-y-4">
-              <p className="text-lg text-gray-700">
-                The African Art Celebration platform is designed to showcase and
-                promote African art and artists through a modern, visually
-                stunning web experience. We aim to bridge the gap between
-                talented African creatives and global audiences.
-              </p>
-              <p className="text-lg text-gray-700">
-                Our platform celebrates the rich diversity of African artistic
-                expressions—from sculptures and iron bending art to furniture
-                design, architecture, and contemporary works. Each piece tells a
-                story of heritage, innovation, and cultural identity.
-              </p>
-              <p className="text-lg text-gray-700">
-                By providing visibility to these talented artists, we help them
-                gain recognition, build their reputation, and ultimately drive
-                sustainable income through their craft. We believe that African
-                art deserves the global spotlight it has been denied for too
-                long.
-              </p>
-              <p className="text-lg text-gray-700 font-semibold">
-                Our vision extends beyond mere showcasing—we&apos;re building a
-                community that celebrates, preserves, and evolves African
-                artistic traditions for future generations.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
       {/* About the Creator Section */}
       <motion.section
         className="py-16 px-4 md:px-8 bg-gray-50"
@@ -212,96 +157,15 @@ export default function About() {
             <motion.div variants={fadeIn}>
               <ImageSlider
                 images={creatorImages}
-                className="h-80 lg:h-svh w-full"
+                className="h-80 lg:h-svh w-full object-cover object-top"
               />
             </motion.div>
           </div>
         </div>
       </motion.section>
-
-      {/* Contact Form Section */}
-      {/* <motion.section
-        className="py-16 px-4 md:px-8 bg-white"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={staggerContainer}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            className="text-3xl font-bold mb-8 text-center text-gray-800"
-            variants={fadeIn}
-          >
-            Get In Touch
-          </motion.h2>
-
-          <div className="grid grid-cols gap-8 px-2 md:px-36 items-center justify-center">
-            <motion.div variants={fadeIn}>
-              <ContactForm
-                title="Get In Touch"
-                subtitle="Have questions about our company or services? We would love to hear from you!"
-                buttonText="Send Your Message"
-                loadingText="Sending..."
-                onSubmit={handleFormSubmit}
-                initialFormData={{
-                  name: "",
-                  email: "",
-                  message:
-                    "I am interested in learning more about your services.",
-                }}
-                motionProps={{
-                  initial: { opacity: 0, x: -30 },
-                  animate: { opacity: 1, x: 0 },
-                  transition: { duration: 0.6, delay: 0.3 },
-                }}
-              />
-            </motion.div>
-
-            <motion.div variants={fadeIn} className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-4 text-indigo-800">
-                Connect With Me
-              </h3>
-              <p className="text-lg text-gray-700 mb-6">
-                We&apos;re always looking to collaborate with artists,
-                collectors, and enthusiasts who share our passion for African
-                art. Whether you have questions, suggestions, or just want to
-                say hello, we&apos;d love to hear from you.
-              </p>
-
-              <motion.div
-                className="mt-8"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Link
-                  href="https://linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-yellow-400 text-indigo-900 text-center px-6 py-3 rounded-full font-medium hover:bg-yellow-500 transition"
-                >
-                  <div className="flex items-center justify-center space-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    <span>Let&apos;s Talk</span>
-                  </div>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section> */}
-
-      {/* Future Plans Section */}
-      {/* <motion.section
-        className="py-16 px-4 md:px-8 bg-gradient-to-r from-purple-900 to-indigo-900 text-white"
+      {/* Purpose Section - Tile Grid */}
+      <motion.section
+        className="py-16 px-4 md:px-8 bg-gray-50"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -309,102 +173,49 @@ export default function About() {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-3xl font-bold mb-8 text-center"
+            className="text-3xl font-bold mb-8 text-center text-gray-800"
             variants={fadeIn}
           >
-            Looking Ahead
+            Our Purpose
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              className="bg-white/10 backdrop-blur-sm p-6 rounded-xl"
-              variants={fadeIn}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <div className="h-14 w-14 bg-yellow-400 text-indigo-900 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">E-Commerce Integration</h3>
-              <p>
-                Soon, you&apos;ll be able to purchase artworks directly from the
-                artists, supporting their work and bringing a piece of African
-                creativity into your space.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <motion.div variants={fadeIn}>
+              <ImageSlider
+                images={purposeImages}
+                className="h-80 lg:h-96 w-full"
+              />
             </motion.div>
 
-            <motion.div
-              className="bg-white/10 backdrop-blur-sm p-6 rounded-xl"
-              variants={fadeIn}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <div className="h-14 w-14 bg-yellow-400 text-indigo-900 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Artist Communities</h3>
-              <p>
-                We&apos;re developing spaces for artists to connect,
-                collaborate, and share resources, fostering a vibrant community
-                of African creators.
+            <motion.div variants={fadeIn} className="space-y-4">
+              <p className="text-lg text-gray-700">
+                The African Art Celebration platform is designed to showcase and
+                promote African art and artists through a modern, visually
+                stunning web experience. We aim to bridge the gap between
+                talented African creatives and global audiences.
               </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-white/10 backdrop-blur-sm p-6 rounded-xl"
-              variants={fadeIn}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            >
-              <div className="h-14 w-14 bg-yellow-400 text-indigo-900 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Virtual Exhibitions</h3>
-              <p>
-                Experience immersive virtual exhibitions featuring curated
-                collections from across the continent, bringing the gallery
-                experience to your device.
+              <p className="text-lg text-gray-700">
+                Our platform celebrates the rich diversity of African artistic
+                expressions—from sculptures and iron bending art to furniture
+                design, architecture, and contemporary works. Each piece tells a
+                story of heritage, innovation, and cultural identity.
+              </p>
+              <p className="text-lg text-gray-700">
+                By providing visibility to these talented artists, we help them
+                gain recognition, build their reputation, and ultimately drive
+                sustainable income through their craft. We believe that African
+                art deserves the global spotlight it has been denied for too
+                long.
+              </p>
+              <p className="text-lg text-gray-700 font-semibold">
+                Our vision extends beyond mere showcasing—we&apos;re building a
+                community that celebrates, preserves, and evolves African
+                artistic traditions for future generations.
               </p>
             </motion.div>
           </div>
         </div>
-      </motion.section> */}
+      </motion.section>
     </>
   );
 }

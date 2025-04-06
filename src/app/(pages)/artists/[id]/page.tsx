@@ -101,6 +101,7 @@ export default function ArtistDetail() {
                     alt={artist.name}
                     layout="fill"
                     objectFit="cover"
+                    className="object-cover object-center"
                   />
                 </div>
               </div>
@@ -197,6 +198,7 @@ export default function ArtistDetail() {
                     alt={artwork.title}
                     layout="fill"
                     objectFit="cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="p-4">

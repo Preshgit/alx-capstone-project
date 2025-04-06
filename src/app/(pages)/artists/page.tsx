@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { artists } from "../../data/artistsData";
 import Link from "next/link";
 import Image from "next/image";
+import { FaInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import { TbWorld } from "react-icons/tb";
 
 export default function Artists() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -101,17 +103,21 @@ export default function Artists() {
                   variants={item}
                   className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row cursor-pointer hover:shadow-lg transition"
                 >
-                  <Link
-                    href={`/artists/${artist.id}`}
-                    className="md:w-1/3 h-64 md:h-auto relative"
-                  >
-                    <Image
-                      src={artist.profileImage}
-                      alt={artist.name}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </Link>
+                  {/* Image container - Fixed aspect ratio on mobile */}
+                  <div className="md:w-1/3 relative w-full aspect-square md:aspect-auto">
+                    <Link
+                      href={`/artists/${artist.id}`}
+                      className="block h-full"
+                    >
+                      <Image
+                        src={artist.profileImage}
+                        alt={artist.name}
+                        fill
+                        className="object-cover object-center"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </Link>
+                  </div>
                   <div className="p-6 md:w-2/3">
                     <Link href={`/artists/${artist.id}`}>
                       <h3 className="text-xl font-bold text-gray-800 mb-2">
@@ -121,6 +127,7 @@ export default function Artists() {
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {artist.description}
                     </p>
+
                     <div className="flex space-x-3">
                       {artist.website && (
                         <a
@@ -129,20 +136,7 @@ export default function Artists() {
                           rel="noopener noreferrer"
                           className="text-indigo-600 hover:text-indigo-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                            />
-                          </svg>
+                          <TbWorld className="h-6 w-6" />
                         </a>
                       )}
                       {artist.instagram && (
@@ -152,16 +146,7 @@ export default function Artists() {
                           rel="noopener noreferrer"
                           className="text-pink-600 hover:text-pink-800"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                          >
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z" />
-                            <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z" />
-                            <circle cx="18.406" cy="5.594" r="1.44" />
-                          </svg>
+                          <FaInstagram className="h-6 w-6" />
                         </a>
                       )}
                       {artist.twitter && (
@@ -171,14 +156,7 @@ export default function Artists() {
                           rel="noopener noreferrer"
                           className="text-blue-500 hover:text-blue-700"
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                          >
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.99 9.99 0 01-3.159 1.207 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
-                          </svg>
+                          <FaSquareXTwitter className="h-6 w-6" />
                         </a>
                       )}
                     </div>

@@ -59,16 +59,19 @@ const ImageSlider = ({
       {images.map((image, index) => (
         <motion.div
           key={index}
-          className="absolute inset-0"
+          className="absolute inset-0 w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentIndex ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="w-full h-full object-cover"
-          />
+          <div className="relative w-full overflow-hidden">
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover object-top"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
           {image.caption && (
             <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-sm">
               {image.caption}

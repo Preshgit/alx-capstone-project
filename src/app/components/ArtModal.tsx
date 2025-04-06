@@ -95,7 +95,7 @@ export default function ArtModal({ isOpen, onClose, artwork }: ArtModalProps) {
                     <Image
                       src={artwork.imageUrl}
                       alt={artwork.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                       width={600}
                       height={800}
                     />

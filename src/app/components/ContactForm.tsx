@@ -90,7 +90,7 @@ export default function ContactForm({
         });
       }
 
-      // Hide the popup after 5 seconds
+      // Hide the popup after 3 seconds
       setTimeout(() => {
         setShowSuccessPopup(false);
       }, 3000);

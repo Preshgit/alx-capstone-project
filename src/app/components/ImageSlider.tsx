@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-// Define the type for each image object
+// Defining the type for each image object
 interface ImageType {
   src: string;
   alt: string;

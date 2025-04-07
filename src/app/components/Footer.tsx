@@ -45,44 +45,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* <div>
-            <h3 className="text-xl font-bold mb-4">Categories</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/categories/sculptures"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Sculptures
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/categories/iron-bending"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Iron Bending Art
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/categories/furniture"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Furniture Design
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/categories/architecture"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Architecture
-                </Link>
-              </li>
-            </ul>
-          </div> */}
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">

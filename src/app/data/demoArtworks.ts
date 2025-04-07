@@ -27,7 +27,7 @@ export const demoArtworks: ArtworkType[] = [
   },
   {
     id: 1011,
-    title: "Ancestral Wisdom",
+    title: "Lagos Cowboy",
     artist: "Dotun Popoola",
     artistSlug: "chika-okoye",
     description:
@@ -87,7 +87,7 @@ export const demoArtworks: ArtworkType[] = [
   },
   {
     id: 47,
-    title: "Efunsetan Aniwu",
+    title: "Efunsetan Aniwura",
     artist: "Jonathan Imafidon",
     artistSlug: "tendai-moyo",
     description:

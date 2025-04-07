@@ -10,10 +10,13 @@ import { FaInstagram, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 export default function About() {
   // Sample images for purpose section
   const purposeImages = [
-    { src: "/images/cowHead.jpg", alt: "Traditional African sculpture" },
-    { src: "/images/chicken1.jpg", alt: "Contemporary African painting" },
-    { src: "/images/ileIla.jpg", alt: "African architecture" },
-    { src: "/images/ileIlachair1.jpg", alt: "African furniture design" },
+    { src: "/images/iconicDog.jpg", alt: "Traditional African sculpture" },
+    { src: "/images/cowHead.jpg", alt: "Contemporary African painting" },
+    { src: "/images/dotun/fela.jpg", alt: "African architecture" },
+    {
+      src: "/images/jonathan/basorunOgunmola2.jpg",
+      alt: "African furniture design",
+    },
   ];
 
   // Sample images for creator section
@@ -44,7 +47,6 @@ export default function About() {
     email: string;
     message: string;
   }) => {
-    // Here you would typically send the data to your backend
     console.log("Form submitted with data:", formData);
 
     // Simulate an API call

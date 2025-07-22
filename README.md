@@ -8,11 +8,6 @@ A modern web application designed to showcase and promote African art and artist
 
 This platform celebrates various categories of African art including sculptures, iron bending art, furniture design, architecture, and other traditional and contemporary works. The goal is to provide a visually stunning experience while helping African creatives gain recognition and drive sales.
 
-## To My Mentor
-
-I’ve implemented the functionality to fetch data from my backend database. At the moment, I’m manually populating the database with the artwork data I’ve researched. This process is taking a bit more time than I initially expected, as I’m using Postman within VSCode to post each entry to my MongoDB Atlas database one by one.
-I just wanted to share this in case the project gets reviewed before I push the final version to GitHub. Thank you for your understanding!
-
 ## Features
 
 - **Art Showcase:** Grid-based display of African artworks with motion effects and transitions
